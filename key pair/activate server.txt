@@ -1,8 +1,0 @@
-$path = ".\Rb-api-webserver.pem"
-icacls.exe $path /reset
-icacls.exe $path /GRANT:R "$($env:USERNAME):(R)"
-icacls.exe $path /inheritance:r
-
-==
-activate:
-ssh -i "Rb-api-webserver.pem" ubuntu@ec2-18-136-102-192.ap-southeast-1.compute.amazonaws.com
